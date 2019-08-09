@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+    <h1>Team Unagi: Group no 7</h1>
+    <h3>Yelp Database Management System</h3>
+    <form name="testForm" action="/query" method="POST" onsubmit="">
+        <div class="container">
+            <input type="radio" name="options" id="option1" value="1" onClick="javascript:return yourfunction(1)">  1. See business in a particular area based on their star rating<br/>
+                <div id = "one" style = "display:none"> <br/>
+                Select a city
+                <select name="1">
+                    <option name="city" value="Toronto">Toronto</option>
+                    <option name="city" value="Pittsburgh">Pittsburgh</option>
+                    <option name="city" value="Charlotte">Charlotte</option>
+                </select><br/>
+                <a><input type=submit value=Submit></a>
+                </div><br/>
+
+            <input type="radio" name="options" id="option2" value="2" onClick="javascript:return yourfunction(2)">  2. Check business open during a given time <br/>
+
+                <div id = "two" style = "display:none"> <br/>
+                Select a category
+                <select name="2">
+                    <option name="categories" value="Restaurants">Restaurants</option>
+                    <option name="categories" value="Fashion">Fashion</option>
+                    <option name="categories" value="Sandwiches">Sandwiches</option>
+                    <option name="categories" value="Bars">Bars</option>
+                </select><br/>
+                <a><input type=submit value=Submit></a>
+                </div><br/>
+
+            <input type="radio" name="options" id="option3" value="3" onClick="javascript:return yourfunction(3)">  3. Get top 10 users who have given the most number of reviews <br/> <br/>
+
+            <input type="radio" name="options" id="option4" value="4" onClick="javascript:return yourfunction(4)">  4. Get top 15 business who have maximum number of checkins <br/> <br/>
+
+            <input type="radio" name="options" id="option5" value="5" onClick="javascript:return yourfunction(5)">  5. See the top 50 business who have the most numnber of reviews in the category they belong <br/>
+
+                <div id = "five" style = "display:none"> <br/>
+                Select a category
+                <select name="5">
+                    <option name="categories" value="Restaurants">Restaurants</option>
+                    <option name="categories" value="Desserts">Desserts</option>
+                    <option name="categories" value="Fashion">Fashion</option>
+
+                </select><br/>
+                <a><input type=submit value=Submit></a>
+                </div><br/>
+
+            <input type="radio" name="options" id="option6" value="6" onClick="javascript:return yourfunction(6)">  6. See the number of businesses belonging to a particular category per city <br/>
+
+                <div id = "six" style = "display:none"> <br/>
+                Select a category
+                <select name="6">
+                    <option name="categories" value="Restaurants">Restaurants</option>
+                    <option name="categories" value="Desserts">Desserts</option>
+                    <option name="categories" value="Fashion">Fashion</option>
+                    <option name="categories" value="Bars">Bars</option>
+                </select><br/>
+                <a><input type=submit value=Submit></a>
+                </div><br/>
+
+            <input type="radio" name="options" id="option7" value="7" onClick="javascript:return yourfunction(7)">  7. Check the top 50 categories based on the total number of reviews <br/> <br/>
+
+            <input type="radio" name="options" id="option8" value="8" onClick="javascript:return yourfunction(8)">  8. Show the users who are not unhappy with the services of a businesses based on the number of stars they give <br/>
+
+                <div id = "eight" style = "display:none"> <br/>
+                Select a business name
+                <select name="8">
+                    <option name="businessname" value="IHOP">IHOP</option>
+                    <option name="businessname" value="Starbucks">Starbucks</option>
+                    <option name="businessname" value="KFC">KFC</option>
+                    <option name="businessname" value="Sushiya">Sushiya</option>
+                </select><br/>
+                <a><input type=submit value=Submit></a>
+                </div><br/>
+
+            <input type="radio" name="options" id="option9" value="9" onClick="javascript:return yourfunction(9)">  9. Get the top 10 users based on the number of fans they have <br/> <br/>
+
+            <input type="radio" name="options" id="option10" value="10" onClick="javascript:return yourfunction(10)">  10. List the name of the restaurants that show menu photos <br/> <br/>
+
+            <input type="radio" name="options" id="option11" value="11" onClick="javascript:return yourfunction(11)">  11. List the number of tips given in order of their date posted <br/> <br/>
+
+            <input type="radio" name="options" id="option12" value="12" onClick="javascript:return yourfunction(12)">  12. (Trigger) This will allow you to write a review for a business and increase the number of reviews of that business <br/>
+
+                <div id = "twelve" style = "display:none"> <br/>
+                Write a review for the new Starbucks opened in your area:<br/>
+                    <input type="text" name="12" value="">
+
+                <a><input type=submit value=Submit></a>
+                </div><br/>
+
+        </div>
+
+        <div id = "others" style = "display:none"> <br/>
+        <a><input type=submit value=Submit></a>
+        </div><br/>
+
+    </form>
+
+    <script>
+        function yourfunction(radioid) {
+            document.getElementById('one').style.display = 'none';
+            document.getElementById('two').style.display = 'none';
+            document.getElementById('five').style.display = 'none';
+            document.getElementById('six').style.display = 'none';
+            document.getElementById('eight').style.display = 'none';
+            document.getElementById('others').style.display = 'none';
+            if(radioid == 1) {
+                document.getElementById('one').style.display = 'block';
+            } else if(radioid == 2) {
+                document.getElementById('two').style.display = 'block';
+            } else if(radioid == 5) {
+                document.getElementById('five').style.display = 'block';
+            } else if(radioid == 6) {
+                document.getElementById('six').style.display = 'block';
+            } else if(radioid == 8) {
+                document.getElementById('eight').style.display = 'block';
+            } else if(radioid == 12) {
+                document.getElementById('twelve').style.display = 'block';
+            } else {
+                document.getElementById('others').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

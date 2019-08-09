@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="/index">
+        Home Page
+    </a>
+    <h1>Output:</h1>
+    <table>
+    <tr>
+        {% for elem in headers %}
+        <th><pre>{{elem}}       </pre></th>
+        {% endfor %}
+    </tr>
+    {% for item in data %}
+    <tr>
+        {% for ele in item %}
+            <td><pre>{{ ele }}      </pre></td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
